@@ -1,4 +1,4 @@
-const readFile = require('../service/utilities');
+const { readFile } = require('../service/utilities');
 
 module.exports = async (_req, res) => {
   const talkers = await readFile();

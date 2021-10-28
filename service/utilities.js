@@ -9,4 +9,12 @@ async function readFile() {
   }
 }
 
-module.exports = readFile;
+async function writeFile(newTalker) {
+  try {
+    return fs.writeFile('talker.json', JSON.stringify(newTalker));
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+module.exports = { readFile, writeFile };

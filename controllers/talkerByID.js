@@ -1,4 +1,4 @@
-const readFile = require('../service/utilities');
+const { readFile } = require('../service/utilities');
 
 module.exports = async (req, res) => {
   const { id } = req.params;
