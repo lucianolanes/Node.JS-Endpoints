@@ -1,3 +1,1 @@
-module.exports = (_req, res) => {
-  res.status(200).json({ token: '11e490318c8440d0' });
-};
+module.exports = (_req, res) => res.status(200).json({ token: '11e490318c8440d0' });
