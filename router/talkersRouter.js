@@ -4,6 +4,7 @@ const talkers = require('../controllers/talkers');
 const addTalker = require('../controllers/addTalker');
 const editTalker = require('../controllers/editTalker');
 const deleteTalker = require('../controllers/deleteTalker');
+const searchByName = require('../controllers/searchByName');
 const checkAge = require('../middlewares/checkAge');
 const checkName = require('../middlewares/checkName');
 const checkRate = require('../middlewares/checkRate');
@@ -16,11 +17,15 @@ const router = express.Router();
 
 router.get('/', talkers);
 
+router.get('/search', checkToken, searchByName);
+
 router.get('/:id', checkTalkerID, talkerByID);
 
-router.delete('/:id', checkToken, deleteTalker);
+router.use('/', checkToken);
 
-router.use('/', checkToken, checkName, checkAge, checkTalk, checkRate, checkWatchedAt);
+router.delete('/:id', deleteTalker);
+
+router.use('/', checkName, checkAge, checkTalk, checkRate, checkWatchedAt);
 
 router.post('/', addTalker);
 
