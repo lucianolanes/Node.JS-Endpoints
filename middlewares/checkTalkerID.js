@@ -1,4 +1,4 @@
-const readFile = require('../service/utilities');
+const { readFile } = require('../service/utilities');
 
 async function checkTalkerID(req, res, next) {
   const { id } = req.params;
