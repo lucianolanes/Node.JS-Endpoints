@@ -17,7 +17,9 @@ router.get('/', talkers);
 
 router.get('/:id', checkTalkerID, talkerByID);
 
-router.post('/', checkToken, checkName, checkAge, checkTalk, checkRate, checkWatchedAt, addTalker);
+router.use('/', checkToken, checkName, checkAge, checkTalk, checkRate, checkWatchedAt);
 
-router.put('/:id', checkToken, checkName, checkAge, checkTalk, checkRate, checkWatchedAt, editTalker);
+router.post('/', addTalker);
+
+router.put('/:id', editTalker);
 module.exports = router;
