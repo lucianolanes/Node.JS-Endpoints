@@ -1,9 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const talkersRouter = require('./router/talkersRouter');
-const checkEmail = require('./middlewares/checkEmail');
-const checkPassword = require('./middlewares/checkPassword');
 const generateToken = require('./controllers/generateToken');
+const { checkEmail, checkPassword } = require('./middlewares/ValidationMiddlewares');
 
 const app = express();
 app.use(bodyParser.json());

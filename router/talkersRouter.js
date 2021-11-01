@@ -5,13 +5,15 @@ const addTalker = require('../controllers/addTalker');
 const editTalker = require('../controllers/editTalker');
 const deleteTalker = require('../controllers/deleteTalker');
 const searchByName = require('../controllers/searchByName');
-const checkAge = require('../middlewares/checkAge');
-const checkName = require('../middlewares/checkName');
-const checkRate = require('../middlewares/checkRate');
-const checkTalk = require('../middlewares/checkTalk');
-const checkTalkerID = require('../middlewares/checkTalkerID');
-const checkToken = require('../middlewares/checkToken');
-const checkWatchedAt = require('../middlewares/checkWatchedAt');
+const {
+  checkAge,
+  checkName,
+  checkRate,
+  checkTalk,
+  checkTalkerID,
+  checkToken,
+  checkWatchedAt,
+} = require('../middlewares/ValidationMiddlewares');
 
 const router = express.Router();
 
