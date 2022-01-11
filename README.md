@@ -20,7 +20,6 @@ Foram criadas rotas e middlewares que irão ler e realizar alterações utilizan
 
 - O endpoint deve ser capaz de retornar um token aleatório de 16 caracteres que deverá ser utilizado nas demais requisições.
 - O endpoint deverá retornar um código de `status 200` com o token gerado.
-- 
 - O campo `email` deverá ser um email válido. Ele é obrigatório.
 - Caso o campo não seja passado ou esteja vazio retorne um código de `status 400`.
 - Caso o email passado não seja um email válido retorne um código de `status 400`.
